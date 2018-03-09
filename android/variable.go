@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"aosp/soong/android_aosp"
+	"dot/soong/android"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -98,8 +98,8 @@ type variableProperties struct {
 		}
 
 		// include Aosp variables
-		Aosp android_aosp.Product_variables
-		Qualcomm android_aosp.Product_variables
+		Dot android.Product_variables
+		Qualcomm android.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -175,8 +175,8 @@ type productVariables struct {
 	DeviceKernelHeaders []string `json:",omitempty"`
 
 	// include Aosp variables
-	Aosp android_aosp.ProductVariables
-	Qualcomm android_aosp.ProductVariables
+	Dot android.ProductVariables
+	Qualcomm android.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
